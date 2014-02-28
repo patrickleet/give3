@@ -1,19 +1,19 @@
 <template name="footer">
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <ul class="nav nav-justified">
-      <li>
+    <ul class="nav nav-pills nav-justified">
+      <li class="{{activeRouteClass 'discover'}}">
         <a class="menu-item" href="{{pathFor 'discover'}}">
           <i class="fa fa-shopping-cart icon"></i>
           <span class="text">Discover</span>
         </a>
       </li>
-      <li>
+      <li class="{{activeRouteClass 'create'}}">
         <a class="menu-item" href="{{pathFor 'create'}}">
           <i class="fa fa-shopping-cart icon"></i>
           <span class="text">Create</span>
         </a>
       </li>
-      <li>
+      <li class="{{activeRouteClass 'dashboard'}}">
         <a class="menu-item" href="{{pathFor 'dashboard'}}">
           <i class="fa fa-shopping-cart icon"></i>
           <span class="text">Dashboard</span>
