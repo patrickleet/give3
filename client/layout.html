@@ -1,3 +1,7 @@
 <template name="layout">
-  {{yield}}
+  <div class="layout">
+    {{> header}}
+    {{yield}}
+    {{> footer}}
+  </div>
 </template>
