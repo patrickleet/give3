@@ -3,21 +3,31 @@
 }
 
 .nav-justified {
-  & .navbar-brand {
-    width: 100%;
-  }
+  & > li {
+    display: table-cell;
+    width: 1%;
 
-  & .menu-item {
-    text-align: center;
-    font-size: 12px;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    cursor: pointer;
-    & > .icon {
-      display: block;
-      margin: 0 auto;
-      font-size: 25px;
+    & .navbar-brand {
+      width: 100%;
+
+    }
+
+    & .menu-item {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      cursor: pointer;
+      margin-bottom: 0;
+
+      & > .icon {
+        display: block;
+        margin: 0 auto;
+        font-size: 25px;
+      }
     }
   }
+
+
 }
