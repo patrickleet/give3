@@ -1,3 +1,14 @@
 <template name="header">
-  header
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <ul class="nav nav-justified">
+      <li>
+        <a class="navbar-brand" href="{{pathFor 'homepage'}}">Give 3</a>
+      </li>
+    </ul>
+  </div>
+  <div class="messages">
+    {{#each messages}}
+    <p class="message message-{{type}}">{{message}}</p>
+    {{/each}}
+  </div>
 </template>
