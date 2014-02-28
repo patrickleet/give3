@@ -1,5 +1,22 @@
 <template name="discover">
   <div class="container">
-    <h1>Discover</h1>
+    <div class="row">
+      {{#if acts}}
+        {{#each acts}}
+          <div class="col-xs-6">
+            YOLO
+          </div>
+        {{/each}}
+      {{else}}
+        <div class="col-xs-12">
+          <div class="centered">
+          <p class="lead">No Acts of Kindness</p>
+          <p>
+            <a href="{{pathFor 'create'}}">Create One</a>
+          </p>
+          </div>
+        </div>
+      {{/if}}
+    </div>
   </div>
 </template>
