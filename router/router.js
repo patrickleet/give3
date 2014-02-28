@@ -66,7 +66,9 @@ Router.before(filters.isLoggedOut, {only: [
 
 // Check authenticated
 Router.before(filters.isLoggedIn, {only: [
-  'dashboard'
+  'dashboard',
+  'create',
+  'discover'
 ]});
 
 // Show loading bar for any route that loads a subscription

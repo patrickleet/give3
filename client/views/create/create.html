@@ -1,6 +1,22 @@
 <template name="create">
   <div class="container">
-    <h1>Create</h1>
-    <p class="lead">Create things here</p>
+    <h3>New Act of Kindness</h3>
+    {{#autoForm schema=actSchema}}
+
+    {{afFieldInput 'photoId' type="hidden"}}
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="file"
+             class="form-control
+             photoUploader"
+             id="image"
+             name="image">
+    </div>
+    {{afQuickField 'description'}}
+    <div>
+      <button type="reset" class="btn btn-default">Reset</button>
+      <button type="submit" class="btn btn-primary insert">Submit</button>
+    </div>
+    {{/autoForm}}
   </div>
 </template>
