@@ -84,10 +84,17 @@ Router.map(function() {
     path: '/'
   });
 
+  // Create
+
+  this.route('create');
+
   // Dashboard
 
-  this.route('dashboard', {
-    path: '/dashboard'
-  });
+  this.route('dashboard');
+
+  // Discover
+
+  this.route('discover')
+
 
 });
