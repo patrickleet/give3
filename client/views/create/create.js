@@ -5,9 +5,17 @@ Template.create.helpers({
   }
 });
 
+
+// Template.create.image = function() {
+//   return ActsFS;
+// };
+
+// Template.create.metadata = {
+//   userId: Meteor.userId()
+// };
+
 Template.create.events({
   'change .photoUploader': function(event, template) {
-    debugger;
     var userId = Meteor.userId();
     var files = event.target.files,
         meta = {
@@ -19,11 +27,11 @@ Template.create.events({
     if (files.length) {
         var file = files[0];
         file.metadata = meta;
-        var fsFile = ActsFS.insert(file, function(err, id) {
+        var fsFile = ActsFS.storeFile(file, meta, function(err, id) {
           if (err) throw new Meteor.Meteor.Error(500, 'Error 500: Something', err);
         });
 
-        photoField.val(fsFile._id);
+        photoField.val(fsFile);
     }
   }
 });

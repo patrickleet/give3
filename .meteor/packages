@@ -22,8 +22,5 @@ accounts-ui
 accounts-password
 service-configuration
 less
-cfs-gridfs
-cfs-filesystem
-cfs-handlebars
-cfs-graphicsmagick
 autopublish
+cfs-public-folder

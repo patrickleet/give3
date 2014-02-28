@@ -3,9 +3,7 @@
     <div class="row">
       {{#if acts}}
         {{#each acts}}
-          <div class="col-xs-6">
-            YOLO
-          </div>
+          {{> act}}
         {{/each}}
       {{else}}
         <div class="col-xs-12">
@@ -17,6 +15,17 @@
           </div>
         </div>
       {{/if}}
+    </div>
+  </div>
+</template>
+<template name="act">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-responsive" alt="{{photoId}}">
+      <div class="caption">
+        <strong>{{username}}</strong>
+        <p>{{description}}</p>
+      </div>
     </div>
   </div>
 </template>

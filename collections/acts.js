@@ -10,15 +10,11 @@ Acts = new Meteor.Collection('acts', {
   })
 });
 
-var gridFSStore = new FS.Store.GridFS("acts", {
-  // before - for image manipulation
-});
-ActsFS = new FS.Collection('acts', {
-  stores: [gridFSStore],
-  filter: {
-    allow: {
-      contentTypes: ['image/*']
-    }
+
+ActsFS = new CollectionFS('acts');
+ActsFS.filter({
+  allow: {
+    contentTypes: ['image/*']
   }
 });
 
@@ -45,9 +41,3 @@ ActsFS.allow({
     return !!userId;
   }
 });
-
-Meteor.methods({
-  createActOfKindness: function() {
-    console.log('create act of kindness');
-  }
-})
