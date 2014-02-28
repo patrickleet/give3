@@ -1,6 +1,15 @@
 Acts = new Meteor.Collection('acts');
+
+var gridFSStore = new FS.Store.GridFS("acts", {
+  // before - for image manipulation
+});
 ActsFS = new FS.Collection('acts', {
-  stores: [new FS.Store.FileSystem("images", {path: "~/uploads"})]
+  stores: [gridFSStore],
+  filter: {
+    allow: {
+      contentTypes: ['image/*']
+    }
+  }
 });
 
 Acts.allow({
