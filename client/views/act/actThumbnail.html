@@ -1,0 +1,7 @@
+<template name="actThumbnail">
+  <div class="act-thumbnail col-xs-6 col-sm-6 col-md-4">
+    <a href="{{pathFor 'act'}}">
+      <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-act img-responsive" alt="{{photoId}}">
+    </a>
+  </div>
+</template>

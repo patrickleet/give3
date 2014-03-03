@@ -36,3 +36,5 @@ http-methods
 cfs-tempstore
 reactive-property
 micro-queue
+imagemagick
+graphicsmagick

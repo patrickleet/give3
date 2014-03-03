@@ -86,6 +86,15 @@ Router.map(function() {
     path: '/'
   });
 
+  this.route('act', {
+    path: 'act/:_id',
+    data: function() {
+      return {
+        act: Acts.findOne(this.params._id)
+      }
+    }
+  });
+
   // Create
 
   this.route('create');

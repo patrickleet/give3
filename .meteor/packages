@@ -25,3 +25,5 @@ less
 autopublish
 cfs-public-folder
 moment
+imagemagick
+graphicsmagick

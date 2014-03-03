@@ -10,6 +10,8 @@
     "nprogress": {},
     "font-awesome": {},
     "accounts-entry": {},
-    "collectionFS": {}
+    "collectionFS": {},
+    "imagemagick": {},
+    "graphicsmagick": {}
   }
 }
