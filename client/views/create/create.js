@@ -1,6 +1,15 @@
 Template.create.helpers({
   actSchema: function() {
     var actsForm = new AutoForm(Acts);
+    actsForm.hooks({
+      before: {
+        insert: function(doc) {
+          doc.userId = Meteor.user()._id;
+          doc.created = new Date();
+          return doc;
+        }
+      }
+    });
     return actsForm;
   }
 });

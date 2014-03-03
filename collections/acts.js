@@ -6,6 +6,12 @@ Acts = new Meteor.Collection('acts', {
     },
     photoId: {
       type: String
+    },
+    userId: {
+      type: String
+    },
+    created: {
+      type: Date
     }
   })
 });

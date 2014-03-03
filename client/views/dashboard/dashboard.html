@@ -1,5 +1,39 @@
 <template name="dashboard">
   <div class="container">
-    <h1>Dashboard</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>{{username}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h5>My Acts of Kindness</h5>
+        {{#if acts}}
+          {{#each acts}}
+            {{> myAct}}
+          {{/each}}
+        {{else}}
+          <div class="col-xs-12">
+            <div class="centered">
+            <p class="lead">No Acts of Kindness</p>
+            <p>
+              <a href="{{pathFor 'create'}}">Create One</a>
+            </p>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>
+<template name="myAct">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-responsive" alt="{{photoId}}">
+      <div class="caption">
+        <strong>{{username}}</strong>
+        <p>{{description}}</p>
+      </div>
+    </div>
   </div>
 </template>
