@@ -72,7 +72,10 @@ Router.before(filters.isLoggedIn, {only: [
 ]});
 
 // Show loading bar for any route that loads a subscription
-Router.before(helpers.showLoadingBar, {only: []});
+Router.before(helpers.showLoadingBar, {only: [
+  'discover',
+  'dashboard'
+]});
 
 Router.after(helpers.analyticsRequest);
 
@@ -88,6 +91,11 @@ Router.map(function() {
 
   this.route('act', {
     path: 'act/:_id',
+    waitOn: function() {
+      return [
+        Meteor.subscribe('singleAct', this.params._id)
+      ]
+    },
     data: function() {
       return {
         act: Acts.findOne(this.params._id)
@@ -101,11 +109,23 @@ Router.map(function() {
 
   // Dashboard
 
-  this.route('dashboard');
+  this.route('dashboard', {
+    waitOn: function() {
+      return [
+        Meteor.subscribe('myActs')
+      ]
+    }
+  });
 
   // Discover
 
-  this.route('discover')
+  this.route('discover', {
+    waitOn: function() {
+      return [
+        Meteor.subscribe('allActs')
+      ]
+    }
+  })
 
 
 });

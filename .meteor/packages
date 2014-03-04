@@ -22,7 +22,6 @@ accounts-ui
 accounts-password
 service-configuration
 less
-autopublish
 cfs-public-folder
 moment
 imagemagick
