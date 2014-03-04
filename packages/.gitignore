@@ -38,3 +38,8 @@ reactive-property
 micro-queue
 imagemagick
 graphicsmagick
+/collectionFS
+/imagemagick
+/graphicsmagick
+/simple-schema
+/cfs-public-folder

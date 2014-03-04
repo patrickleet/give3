@@ -4,7 +4,9 @@ Template.create.helpers({
     actsForm.hooks({
       before: {
         insert: function(doc) {
-          doc.userId = Meteor.user()._id;
+          var user = Meteor.user();
+          doc.userId = user._id;
+          doc.username = user.emails[0].address || 'someone from facebook';
           doc.created = new Date();
           return doc;
         }

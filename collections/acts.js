@@ -10,6 +10,9 @@ Acts = new Meteor.Collection('acts', {
     userId: {
       type: String
     },
+    username: {
+      type: String
+    },
     created: {
       type: Date
     }
