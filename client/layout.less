@@ -1,10 +1,18 @@
 .layout {
   & > .container {
     position: absolute;
-    top: 40px;
-    bottom: 63px;
+    top: 55px;
+	bottom: 62px;
     left: 0;
     right: 0;
     overflow: auto;
   }
+}
+
+.fixfixed {
+	.layout {
+		& > .container {
+			bottom: 0px;
+		}
+	}
 }

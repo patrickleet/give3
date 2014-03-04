@@ -12,6 +12,7 @@
     "accounts-entry": {},
     "collectionFS": {},
     "imagemagick": {},
-    "graphicsmagick": {}
+    "graphicsmagick": {},
+    "modernizr-meteor": {}
   }
 }

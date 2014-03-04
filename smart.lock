@@ -14,7 +14,8 @@
       "accounts-entry": {},
       "collectionFS": {},
       "imagemagick": {},
-      "graphicsmagick": {}
+      "graphicsmagick": {},
+      "modernizr-meteor": {}
     },
     "packages": {
       "iron-router": {
@@ -24,8 +25,8 @@
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.0-1",
-        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
@@ -34,8 +35,8 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.4.18",
-        "commit": "991efc809b959e77d94796f47ca6c5b1e5c2c6e2"
+        "tag": "v0.4.20",
+        "commit": "d4d40a5356f9577a7d95d3526045035f3f1135af"
       },
       "fastclick": {
         "git": "https://github.com/percolatestudio/meteor-fastclick",
@@ -64,8 +65,8 @@
       },
       "accounts-entry": {
         "git": "https://github.com/BeDifferential/accounts-entry.git",
-        "tag": "v0.6.1",
-        "commit": "8e42d4abca33d6a00d236d198589fe4924729d09"
+        "tag": "v0.6.2",
+        "commit": "56c9b6c064cc0d92a97aa9b53a8f4da050f54c29"
       },
       "collectionFS": {
         "git": "https://github.com/raix/Meteor-CollectionFS.git",
@@ -81,6 +82,11 @@
         "git": "https://github.com/ewindso/meteor-graphicsmagick.git",
         "tag": "v1.12.2",
         "commit": "795dcb78be6d2b493a547073f98c967e284248e0"
+      },
+      "modernizr-meteor": {
+        "git": "https://github.com/ckir/modernizr-meteor.git",
+        "tag": "v2.6.2",
+        "commit": "391ca2a3beff3cd2b0e1099cb2d744b5a2e8a73e"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
