@@ -38,3 +38,12 @@ reactive-property
 micro-queue
 imagemagick
 graphicsmagick
+/collectionFS
+/imagemagick
+/graphicsmagick
+/simple-schema
+/cfs-public-folder
+/bootstrap-3
+/autoform
+/accounts-entry
+/modernizr-meteor
