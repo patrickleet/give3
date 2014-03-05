@@ -10,7 +10,26 @@
 }
 
 .act {
+  &.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .thumbnail {
     border: none;
+
+    .actions {
+      position: absolute;
+      top: 6px;
+      right: 13px;
+      color: #fff;
+      font-size: 2em;
+
+      & > i {
+        &:hover, &:focus {
+          color: yellow;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

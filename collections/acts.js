@@ -47,3 +47,11 @@ ActsFS.allow({
     return !!userId;
   }
 });
+
+Meteor.methods({
+  inspire: function(actId) {
+    debugger;
+    Meteor.users.update({ _id: this.userId }, { $push: { inspiredBy: actId } });
+    Acts.update({ _id: actId }, { $push: { inspired: this.userId } });
+  }
+});

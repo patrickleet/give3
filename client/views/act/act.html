@@ -2,6 +2,9 @@
   <div class="container act">
     {{#with act}}
       <div class="thumbnail">
+        <div class="actions">
+          <i class="fa fa-star inspire"></i>
+        </div>
         <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-responsive" alt="{{photoId}}">
         <div class="caption">
           <strong>{{username}}</strong>
