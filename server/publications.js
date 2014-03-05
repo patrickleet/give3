@@ -8,7 +8,9 @@ Meteor.publish('myActs', function() {
 
 Meteor.publish('inspiredMe', function () {
 	var user = Meteor.users.findOne(this.userId);
-	return Acts.find({ _id: { $in: user.inspiredBy } });
+	if (user) {
+		return Acts.find({ _id: { $in: user.inspiredBy || [] } });
+	}
 })
 
 Meteor.publish('singleAct', function(id) {
