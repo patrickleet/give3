@@ -53,8 +53,7 @@ ActsFS.allow({
 
 Meteor.methods({
   inspire: function(actId) {
-    debugger;
-    Meteor.users.update({ _id: this.userId }, { $push: { inspiredBy: actId } });
-    Acts.update({ _id: actId }, { $push: { inspired: this.userId } });
+    Meteor.users.update({ _id: this.userId }, { $addToSet: { inspiredBy: actId } });
+    Acts.update(actId, { $addToSet: { inspired: this.userId } }, { validate: false });
   }
 });
