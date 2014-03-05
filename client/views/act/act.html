@@ -3,7 +3,7 @@
     {{#with act}}
       <div class="thumbnail">
         <div class="actions">
-          <i class="fa fa-star inspire"></i>
+          <i class="fa fa-star inspire {{inspiredBy}}"></i>
         </div>
         <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-responsive" alt="{{photoId}}">
         <div class="caption">
