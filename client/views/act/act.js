@@ -6,6 +6,12 @@ Template.act.helpers({
   	var actId = this._id;
   	var inspiredByAct = Meteor.user().inspiredBy && Meteor.user().inspiredBy.indexOf(actId) > -1
   	return (inspiredByAct) ? 'inspiredBy' : '';
+  },
+  hasInspiredOthers: function () {
+    return !!this.inspired;
+  },
+  inspiredCount: function() {
+    return this.inspired && this.inspired.length;
   }
 });
 

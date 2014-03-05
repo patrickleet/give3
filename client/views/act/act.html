@@ -10,10 +10,12 @@
           <strong>{{username}}</strong>
           <p>{{timeAgo}}</p>
           <p class="lead">{{description}}</p>
+          {{#if hasInspiredOthers}}
+          <div>
+            <p>This act has inspired {{inspiredCount}} others.</p>
+          </div>
+        {{/if}}
         </div>
-      </div>
-      <div>
-        <p class="lead">This act has inspired {{inspiredCount}} others.</p>
       </div>
     {{/with}}
   </div>
