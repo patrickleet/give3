@@ -112,7 +112,8 @@ Router.map(function() {
   this.route('dashboard', {
     waitOn: function() {
       return [
-        Meteor.subscribe('myActs')
+        Meteor.subscribe('myActs'),
+        Meteor.subscribe('inspiredMe')
       ]
     }
   });

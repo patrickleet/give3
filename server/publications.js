@@ -6,6 +6,11 @@ Meteor.publish('myActs', function() {
 	return Acts.find({userId: this.userId});
 });
 
+Meteor.publish('inspiredMe', function () {
+	var user = Meteor.users.findOne(this.userId);
+	return Acts.find({ _id: { $in: user.inspiredBy } });
+})
+
 Meteor.publish('singleAct', function(id) {
 	return Acts.find(id);
 });

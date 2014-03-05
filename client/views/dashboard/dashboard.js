@@ -6,5 +6,8 @@ Template.dashboard.helpers({
   },
   acts: function() {
     return Acts.find({userId: Meteor.userId()});
+  },
+  inspirations: function () {
+  	return Acts.find({ _id: { $in: Meteor.user().inspiredBy } });
   }
 });

@@ -2,11 +2,6 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h4>{{username}}</h4>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
         <h5>My Acts of Kindness</h5>
         {{#if acts}}
           {{#each acts}}
@@ -24,8 +19,19 @@
         {{/if}}
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h5>My Inspirations</h5>
+        {{#if inspirations}}
+          {{#each inspirations}}
+            {{> myAct}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
   </div>
 </template>
+
 <template name="myAct">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
