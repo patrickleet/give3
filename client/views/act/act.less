@@ -10,7 +10,32 @@
 }
 
 .act {
+  &.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .thumbnail {
     border: none;
+
+    .actions {
+      position: absolute;
+      top: 6px;
+      right: 13px;
+      color: #fff;
+      font-size: 2em;
+
+      & > i {
+        text-shadow: 0px 0px 4px #000;
+
+        &.inspiredBy {
+          color: yellow;
+        }
+
+        &:hover, &:focus {
+          color: yellow;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

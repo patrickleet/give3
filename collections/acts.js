@@ -50,3 +50,10 @@ ActsFS.allow({
     return !!userId;
   }
 });
+
+Meteor.methods({
+  inspire: function(actId) {
+    Meteor.users.update({ _id: this.userId }, { $addToSet: { inspiredBy: actId } });
+    Acts.update(actId, { $addToSet: { inspired: this.userId } }, { validate: false });
+  }
+});

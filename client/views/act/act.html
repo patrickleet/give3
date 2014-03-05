@@ -2,11 +2,19 @@
   <div class="container act">
     {{#with act}}
       <div class="thumbnail">
+        <div class="actions">
+          <i class="fa fa-star inspire {{inspiredBy}}"></i>
+        </div>
         <img src="{{cfsFileUrl 'default' fileId=photoId collection='ActsFS'}}" class="img-responsive" alt="{{photoId}}">
         <div class="caption">
           <strong>{{username}}</strong>
           <p>{{timeAgo}}</p>
           <p class="lead">{{description}}</p>
+          {{#if hasInspiredOthers}}
+          <div>
+            <p>This act has inspired {{inspiredCount}} others.</p>
+          </div>
+        {{/if}}
         </div>
       </div>
     {{/with}}
